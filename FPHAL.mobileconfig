@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HasRemovalPasscode</key>
+	<false/>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Global HTTP Proxy</string>
+			<key>PayloadDisplayName</key>
+			<string>Global HTTP Proxy</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.proxy.http.global.0539A9FD-A69C-4397-AC9C-C5F2A5D426F4</string>
+			<key>PayloadType</key>
+			<string>com.apple.proxy.http.global</string>
+			<key>PayloadUUID</key>
+			<string>0539A9FD-A69C-4397-AC9C-C5F2A5D426F4</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyCaptiveLoginAllowed</key>
+			<false/>
+			<key>ProxyPACFallbackAllowed</key>
+			<true/>
+			<key>ProxyPACURL</key>
+			<string>http://pac.webdefence.global.blackspider.com/proxy.pac?p=ddsvfh2d</string>
+			<key>ProxyType</key>
+			<string>Auto</string>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>FPprofile2</string>
+	<key>PayloadIdentifier</key>
+	<string>MMacPersonal.33909D62-5EAF-48DE-97D8-CD664553AF11</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>4FC18C6B-F472-472D-8490-01C182BB5161</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
