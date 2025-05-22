@@ -4,8 +4,8 @@ $(document).ready(function() {
 
     // Define page width and height based on your image dimensions
     // For example, if each image is 400px wide by 600px tall:
-    const page_width = 400;
-    const page_height = 600;
+    const page_width = 720;
+    const page_height = 1000;
 
     // Dynamically add pages to the flipbook
     for (let i = 1; i <= numberOfPages; i++) {
