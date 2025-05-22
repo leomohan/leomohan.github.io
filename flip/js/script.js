@@ -7,7 +7,7 @@
 
 \f0\fs24 \cf0 $(document).ready(function() \{\
     // Define the number of pages in your PDF\
-    const numberOfPages = 10; // **IMPORTANT: CHANGE THIS TO YOUR ACTUAL PAGE COUNT**\
+    const numberOfPages = 56; // **IMPORTANT: CHANGE THIS TO YOUR ACTUAL PAGE COUNT**\
 \
     // Define page width and height\
     const page_width = 400; // Half of your flipbook width (e.g., 800 / 2)\
