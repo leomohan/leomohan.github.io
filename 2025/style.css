@@ -1,0 +1,581 @@
+/* General Body Styles */
+body {
+    font-family: 'Georgia', serif; /* A classic, readable font for authors */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark gray for good readability */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Container for consistent content width */
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+    padding: 20px 0;
+}
+
+/* Header and Navigation Styles */
+header {
+    background: #4a4a4a; /* Darker gray for the header */
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Makes the header stick to the top when scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures header stays above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Hero Section (Home Page) */
+/* --- Home Section Specific Styles --- */
+/* --- About Me Section Styles --- */
+.about-me {
+    background-color: #fcfcfc; /* A very light background for this section */
+    padding: 80px 0; /* More padding for distinction */
+}
+
+.about-me h2 {
+    color: #2c3e50; /* Dark heading color for contrast */
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px; /* Space between image and text */
+    justify-content: center; /* Center content when wrapped */
+    align-items: flex-start; /* Align text to top when wrapped */
+    max-width: 900px; /* Limit content width */
+    margin: auto;
+}
+
+.profile-picture {
+    width: 250px; /* Fixed width for profile picture */
+    height: 250px; /* Fixed height for a square image */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #ffd700; /* Gold border around the picture */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.profile-picture:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+.about-text {
+    flex: 2; /* Allows text to take up more space */
+    min-width: 300px; /* Ensures text doesn't get too narrow */
+    text-align: left; /* Align text to the left */
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    color: #555; /* Slightly lighter gray for body text */
+    margin-bottom: 20px;
+    line-height: 1.8; /* Improved line spacing for readability */
+}
+
+/* Responsive adjustments for About Me Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 30px;
+    }
+
+    .profile-picture {
+        width: 200px; /* Smaller size for mobile */
+        height: 200px;
+        margin-bottom: 15px; /* Add some space below the picture */
+    }
+
+    .about-text {
+        text-align: center; /* Center text when stacked on mobile */
+        min-width: unset; /* Remove min-width constraint */
+        padding: 0 15px; /* Add horizontal padding */
+    }
+
+    .about-me h2 {
+        font-size: 2.2rem;
+    }
+}
+
+.latest-book-release {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 800px; /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Align text to left inside this box */
+}
+
+.latest-book-release h3 {
+    text-align: center; /* Center the heading */
+    color: #fff; /* White text for contrast */
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.book-flex-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 30px; /* Space between image and text */
+}
+
+.book-cover-home {
+    width: 250px; /* Fixed width for the book cover */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease; /* Animation for hover */
+}
+
+.book-cover-home:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.book-description-home p {
+    font-size: 1.1rem;
+    color: #eee; /* Lighter text for description */
+    margin-bottom: 20px;
+}
+
+/* General Button Style */
+.btn {
+    display: inline-block;
+    background-color: #ffd700; /* Gold button */
+    color: #4a4a4a; /* Dark text for contrast */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #e6c200; /* Slightly darker gold on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.btn-primary { /* For the subscribe button, if different styling is desired */
+    background-color: #4CAF50; /* A nice green for calls to action */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* CTA (Call to Action) Section - Mailing List */
+.cta-section {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-section h3 {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.mailing-list-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between input and button */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.mailing-list-form input[type="email"] {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 60%; /* Occupy more width */
+    max-width: 350px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.social-media h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+.social-icon {
+    width: 45px; /* Size of social media icons */
+    height: 45px;
+}
+
+/* Responsive adjustments for Home Section */
+@media (max-width: 768px) {
+    .latest-book-release, .cta-section, .social-media {
+        padding: 20px;
+    }
+
+    .book-flex-container {
+        flex-direction: column; /* Stack image and description on small screens */
+        text-align: center;
+    }
+
+    .book-cover-home {
+        width: 180px; /* Smaller size for mobile */
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .mailing-list-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mailing-list-form input[type="email"] {
+        width: 90%; /* Take more width on mobile */
+        max-width: 300px;
+    }
+
+    .mailing-list-form button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .social-media a {
+        margin: 0 10px; /* Reduce margin for icons on smaller screens */
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+.hero {
+    background: #2c3e50; /* Dark blue/gray for a strong first impression */
+    color: #fff;
+    padding: 100px 0;
+    min-height: 400px; /* Ensures enough space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Specific Section Backgrounds (alternating for visual separation) */
+.about-me, .contact, .links {
+    background-color: #fcfcfc; /* Lighter background for these sections */
+}
+
+.my-books {
+    background-color: #e2e2e2; /* Slightly darker background for books section */
+}
+
+/* General Heading Styles */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* A more elegant font for headings */
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Basic Responsive Design (for smaller screens) */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+/* --- Dropdown Navigation Styles --- */
+
+/* Parent dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block; /* Allows side-by-side with other nav items */
+}
+
+/* Dropdown button (My Books) */
+.dropbtn, .sub-dropbtn {
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4a4a4a; /* Same as header background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1; /* Ensures it appears above other content */
+    border-radius: 5px;
+    overflow: hidden; /* For rounded corners */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Align text to left */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #575757; /* Slightly lighter gray */
+    color: #ffd700; /* Gold text on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Nested Submenu Styles */
+.dropdown-submenu {
+    position: relative; /* This is crucial for positioning the submenu */
+}
+
+.submenu-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to .dropdown-submenu */
+    left: 100%; /* Position to the right of the parent menu */
+    top: 0; /* Align to the top of the parent */
+    background-color: #4a4a4a; /* Or whatever dark background color you chose */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Show the submenu on hover */
+.dropdown-submenu:hover .submenu-content {
+    display: block; /* This is the key rule to make it visible on hover */
+}
+
+/* Adjust padding for dropdown button inside header nav ul li */
+header nav ul li .dropbtn {
+    padding-top: 1rem; /* Adjust this value */
+    padding-bottom: 1rem; /* Adjust this value */
+    padding-left: 0; /* Remove horizontal padding from here if it's causing issues */
+    padding-right: 0; /* Remove horizontal padding from here if it's causing issues */
+    /* Or, if you want consistent padding with other nav items */
+    /* padding: 1rem 0; is usually fine, but let's be explicit with 1rem 0.5rem if needed */
+    /* Let's try matching the header's padding slightly */
+    padding: 1rem 0; /* Keeping it consistent with other <li> a in header nav ul li */
+    display: flex; /* Using flex to help vertical alignment of text and arrow */
+    align-items: center; /* Vertically center the text and arrow */
+    gap: 5px; /* Small gap between text and arrow */
+}
+
+/* Ensure the overall li has correct padding or margin */
+header nav ul li {
+    margin-left: 25px; /* Keep consistent with other list items */
+    display: flex; /* Make list items flex containers as well */
+    align-items: center; /* Vertically center items */
+}
+
+/* Adjust padding for sub-dropbtn */
+.sub-dropbtn {
+    width: 100%; /* Make button take full width of parent submenu container */
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: left;
+}
+
+/* Responsive Adjustments for Dropdowns */
+@media (max-width: 768px) {
+    /* Stack dropdowns vertically on small screens */
+    header nav ul li.dropdown {
+        width: 100%; /* Take full width */
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Take full width */
+        box-shadow: none; /* No shadow needed when stacked */
+        background-color: #333; /* Slightly different background for clarity */
+    }
+
+    .dropdown-content a {
+        padding-left: 30px; /* Indent sub-items */
+    }
+
+    .dropdown-submenu {
+        width: 100%;
+    }
+
+    .submenu-content {
+        position: static; /* Remove absolute positioning */
+        width: 100%;
+        box-shadow: none;
+        background-color: #222; /* Even darker for nested level */
+        padding-left: 20px; /* Further indent nested items */
+    }
+
+    .dropbtn, .sub-dropbtn {
+        width: 100%;
+        text-align: center; /* Center text in dropdown buttons on mobile */
+    }
+
+    /* Force dropdowns to always display on mobile for now, as hover is tricky */
+    /* We'll implement a JavaScript toggle later if needed for mobile friendliness */
+    .dropdown:hover .dropdown-content,
+    .dropdown-submenu:hover .submenu-content {
+        display: none; /* Hide by default, will need JS to toggle open/close on mobile */
+    }
+
+    /* For now, let's keep them hidden on mobile. We'll add JS for toggle later.
+       To test, you might temporarily set display: block; for debugging. */
+}
+/* FOR DEBUGGING ONLY - REMOVE AFTER FIXING */
+.submenu-content {
+    display: block !important;
+}
+/* END DEBUGGING */

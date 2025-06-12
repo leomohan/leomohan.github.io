@@ -1,0 +1,115 @@
+/* --- Styles for Dedicated Book Category Pages --- */
+
+/* Main content area */
+.book-category-page {
+    padding-top: 100px; /* Space from sticky header */
+    padding-bottom: 60px;
+    background-color: #f8f8f8; /* A very light background */
+    color: #333;
+}
+
+.book-category-page h1 {
+    font-size: 3rem;
+    color: #2c3e50; /* Dark heading */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.category-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Individual Book Entry Styling */
+.book-entry {
+    display: flex;
+    align-items: flex-start; /* Align image and text to the top */
+    gap: 40px; /* Space between cover and details */
+    margin-bottom: 60px; /* Space between each book entry */
+    padding: 30px;
+    background-color: #fff; /* White background for each book box */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* More pronounced shadow */
+    text-align: left; /* Ensure text inside is left-aligned */
+    transition: transform 0.3s ease; /* Animation for hover */
+}
+
+.book-entry:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+}
+
+.book-cover-page {
+    width: 200px; /* Fixed width for book covers on these pages */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    flex-shrink: 0; /* Prevent cover from shrinking */
+}
+
+.book-details {
+    flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.book-details h3 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.book-details .author-name {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.book-details .book-summary {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* More Books CTA */
+.more-books-cta {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* Responsive adjustments for Book Pages */
+@media (max-width: 768px) {
+    .book-category-page h1 {
+        font-size: 2.2rem;
+    }
+
+    .book-entry {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items when stacked */
+        text-align: center; /* Center text for stacked layout */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .book-cover-page {
+        width: 150px; /* Smaller cover for mobile */
+    }
+
+    .book-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .book-details .book-summary {
+        font-size: 1rem;
+    }
+
+    .category-intro {
+        padding: 0 15px;
+    }
+}
