@@ -579,3 +579,37 @@ header nav ul li {
         width: 100%;
         text-align: center; /* Center text in dropdown buttons on mobile */
     }
+
+    /* IMPORTANT: These lines must be removed or commented out for desktop hover to work */
+    /*
+    .dropdown:hover .dropdown-content,
+    .dropdown-submenu:hover .submenu-content {
+        display: none;
+    }
+    */
+    /* If you still have the above block, ensure it's commented out or deleted */
+}        width: 100%; /* Take full width */
+        box-shadow: none; /* No shadow needed when stacked */
+        background-color: #333; /* Slightly different background for clarity */
+    }
+
+    .dropdown-content a {
+        padding-left: 30px; /* Indent sub-items */
+    }
+
+    .dropdown-submenu {
+        width: 100%;
+    }
+
+    .submenu-content {
+        position: static; /* Remove absolute positioning */
+        width: 100%;
+        box-shadow: none;
+        background-color: #222; /* Even darker for nested level */
+        padding-left: 20px; /* Further indent nested items */
+    }
+
+    .dropbtn, .sub-dropbtn {
+        width: 100%;
+        text-align: center; /* Center text in dropdown buttons on mobile */
+    }
