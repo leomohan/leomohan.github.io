@@ -429,9 +429,34 @@ footer {
 /* Parent dropdown container */
 .dropdown {
     position: relative;
-    display: inline-block; /* Allows side-by-side with other nav items */
+    /* No display: inline-block here, let the li's flex behavior manage it */
 }
+@media (max-width: 768px) {
+    header nav ul li.dropdown {
+        width: 100%;
+        text-align: center;
+        /* Ensure it's not pushing other elements too far */
+    }
 
+    .dropdown-content {
+        position: static; /* Important for mobile to stack properly */
+        width: 100%;
+        box-shadow: none;
+        background-color: #333; /* Darker background for menu on mobile */
+        padding-top: 10px; /* Add some padding if needed */
+        padding-bottom: 10px;
+    }
+
+    .dropdown-content a {
+        padding: 10px 15px; /* Adjusted padding for links on mobile */
+    }
+
+    .dropbtn { /* My Books link on mobile */
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0; /* Keep consistent */
+    }
+}
 /* Dropdown button (My Books) */
 .dropbtn, .sub-dropbtn {
     color: #fff;
@@ -443,16 +468,18 @@ footer {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Style for the dropdown content (hidden by default) */
+/* Style for the dropdown content (ALWAYS VISIBLE) */
 .dropdown-content {
-    display: none;
+    display: block; /* <-- CHANGE to block */
     position: absolute;
-    background-color: #4a4a4a; /* Same as header background */
+    top: 100%; /* <-- IMPORTANT: Position it directly below the 'My Books' button */
+    left: 0; /* <-- Align it with the left edge of 'My Books' */
+    background-color: #4a4a4a;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 1001; /* <-- Change this to a higher value */
+    z-index: 1001;
     border-radius: 5px;
-    overflow: hidden; /* For rounded corners */
+    overflow: hidden;
 }
 
 /* Links inside the dropdown */
@@ -471,50 +498,6 @@ footer {
     color: #ffd700; /* Gold text on hover */
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Nested Submenu Styles */
-.submenu-content {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: #4a4a4a;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 1002; /* <-- Change this to an even higher value */
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.submenu-content {
-    display: none;
-    position: absolute;
-    /* Try adjusting left slightly, or using calc for certainty */
-    left: calc(100% + 1px); /* Pushes it just 1px off the edge of the parent */
-    top: 0;
-    background-color: #4a4a4a;
-    min-width: 160px; /* Keep this as minimum width */
-    min-height: 100%; /* Ensure it has at least the height of its parent */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 2; /* Give it a higher z-index than dropdown-content */
-    border-radius: 5px;
-    overflow: hidden; /* Keep this */
-}
-
-/* Show the submenu on hover */
-.dropdown-submenu:hover .submenu-content {
-    display: block !important; /* Keep the !important */
-}
-
-/* Change background of sub-dropbtn on hover (English) */
-.sub-dropbtn:hover {
-    background-color: #575757; /* Slightly lighter gray */
-    color: #ffd700; /* Gold text on hover */
-}
 /* Adjust padding for dropdown button inside header nav ul li */
 header nav ul li .dropbtn {
     padding-top: 1rem; /* Adjust this value */
