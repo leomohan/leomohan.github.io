@@ -496,7 +496,7 @@ footer {
 
 /* Show the submenu on hover */
 .dropdown-submenu:hover .submenu-content {
-    display: block; /* This is the key rule to make it visible on hover */
+    display: block !important;
 }
 
 /* Adjust padding for dropdown button inside header nav ul li */
