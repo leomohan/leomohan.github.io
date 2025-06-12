@@ -450,7 +450,7 @@ footer {
     background-color: #4a4a4a; /* Same as header background */
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 1; /* Ensures it appears above other content */
+    z-index: 1001; /* <-- Change this to a higher value */
     border-radius: 5px;
     overflow: hidden; /* For rounded corners */
 }
@@ -477,28 +477,44 @@ footer {
 }
 
 /* Nested Submenu Styles */
-.dropdown-submenu {
-    position: relative; /* This is crucial for positioning the submenu */
-}
-
 .submenu-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to .dropdown-submenu */
-    left: 100%; /* Position to the right of the parent menu */
-    top: 0; /* Align to the top of the parent */
-    background-color: #4a4a4a; /* Or whatever dark background color you chose */
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #4a4a4a;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 1;
+    z-index: 1002; /* <-- Change this to an even higher value */
     border-radius: 5px;
     overflow: hidden;
 }
 
-/* Show the submenu on hover */
-.dropdown-submenu:hover .submenu-content {
-    display: block !important;
+.submenu-content {
+    display: none;
+    position: absolute;
+    /* Try adjusting left slightly, or using calc for certainty */
+    left: calc(100% + 1px); /* Pushes it just 1px off the edge of the parent */
+    top: 0;
+    background-color: #4a4a4a;
+    min-width: 160px; /* Keep this as minimum width */
+    min-height: 100%; /* Ensure it has at least the height of its parent */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 2; /* Give it a higher z-index than dropdown-content */
+    border-radius: 5px;
+    overflow: hidden; /* Keep this */
 }
 
+/* Show the submenu on hover */
+.dropdown-submenu:hover .submenu-content {
+    display: block !important; /* Keep the !important */
+}
+
+/* Change background of sub-dropbtn on hover (English) */
+.sub-dropbtn:hover {
+    background-color: #575757; /* Slightly lighter gray */
+    color: #ffd700; /* Gold text on hover */
+}
 /* Adjust padding for dropdown button inside header nav ul li */
 header nav ul li .dropbtn {
     padding-top: 1rem; /* Adjust this value */
