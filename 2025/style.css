@@ -563,19 +563,3 @@ header nav ul li {
         width: 100%;
         text-align: center; /* Center text in dropdown buttons on mobile */
     }
-
-    /* Force dropdowns to always display on mobile for now, as hover is tricky */
-    /* We'll implement a JavaScript toggle later if needed for mobile friendliness */
-    .dropdown:hover .dropdown-content,
-    .dropdown-submenu:hover .submenu-content {
-        display: none; /* Hide by default, will need JS to toggle open/close on mobile */
-    }
-
-    /* For now, let's keep them hidden on mobile. We'll add JS for toggle later.
-       To test, you might temporarily set display: block; for debugging. */
-}
-/* FOR DEBUGGING ONLY - REMOVE AFTER FIXING */
-.submenu-content {
-    display: block !important;
-}
-/* END DEBUGGING */
